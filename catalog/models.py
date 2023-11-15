@@ -23,7 +23,7 @@ class Category(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return ('catalog_category', (), { 'category_slug':self.slug })
+        return ('catalog_category', (), { 'category_slug': self.slug })
     
 
 

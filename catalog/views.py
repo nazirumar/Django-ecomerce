@@ -7,12 +7,13 @@ from .models import Category, Product
 
 def index(request):
     page_title = 'Music Instruments and Sheet Music for Musicians'
-    return render(request, 'index.html',context={'page_title':page_title})
+    return render(request, 'catalog/index.html', context={'page_title':page_title})
 
 
 def show_category(request, category_slug):
     c = get_object_or_404(Category, category_slug)
     product = c.product_set.all()
+    print(product)
     page_title = c.name
     meta_keywords = c.meta_keywords
     meta_description = c.meta_description
@@ -20,9 +21,10 @@ def show_category(request, category_slug):
         'page_title':page_title,
         'meta_keywords':meta_keywords,
         'meta_descriptions':meta_description,
-        'product':product
+        'product':product,
+        'c':c
     }
-    return render(request, 'category.html',context)
+    return render(request, 'catalog/category.html',context)
 
 
 
@@ -41,4 +43,4 @@ def show_product(request, product_slug):
     'p':p
     }
 
-    return render(request, 'product.html', context)
+    return render(request, 'catalog/product.html', context)

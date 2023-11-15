@@ -1,0 +1,24 @@
+{% extends "catalog.html" %}
+
+{% block content %}
+<h1>{{ c.name }}</h1>
+{{ c.description }}
+<br>
+{% for p in products %}
+<div class="product_thumbnail">
+    <a href="{{ p.get_absolute_url }}">
+        <img src="{{ MEDIA_URL }}images/products/thumbnail/{{ p.image }}" alt="{{ p.name }}" class="bn">
+        <br>
+        {{ p.name }}
+    </a>
+</div>
+
+{% endfor %}
+[ category listing here ]
+
+{% include "tags/category_list.html" %}
+
+{% for c in active_categories %}
+<a href="{{c.get_absolute_url }}" {{c.name}}></a> <br>
+{% endfor %}
+{% endblock %}

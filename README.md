@@ -1,6 +1,9 @@
 
 ## Django-ecomerce
 
+# Ecomstore
+    create views
+       * 404_page
 
 # Catalog App
     # create models
@@ -22,9 +25,10 @@
 
 
 
-# setup <Templates>
+# setup Templates
     # Create Templates Folder
         base.html
         index.html
         category.html
         product.html
+        
