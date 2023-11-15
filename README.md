@@ -28,19 +28,19 @@
 # Templates
     # Create Templates Folder
     
-        base.html
-        index.html
-        category.html
-        product.html
+        - base.html
+        - index.html
+        - category.html
+        - product.html
 
         Subdir:
             catalog
-                category.html
-                index.html
-                product.html
+                - category.html
+                - index.html
+                - product.html
             tags
-                category_list.html
-                navigation.html
+                - category_list.html
+                - navigation.html
             
 
 # Static
@@ -50,6 +50,14 @@
         products
             main
             thumbnail
+
+
+# Shopping Cart App
+    models
+        - Our unique Cart ID value
+        - Product ID
+        - Date product was added to cart
+        - Quantity in the cart
 
 
 
