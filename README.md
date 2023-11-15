@@ -25,10 +25,32 @@
 
 
 
-# setup Templates
+# Templates
     # Create Templates Folder
+    
         base.html
         index.html
         category.html
         product.html
+
+        Subdir:
+            catalog
+                category.html
+                index.html
+                product.html
+            tags
+                category_list.html
+                navigation.html
+            
+
+# Static
+    Css
+        style.css
+    Images
+        products
+            main
+            thumbnail
+
+
+    
         

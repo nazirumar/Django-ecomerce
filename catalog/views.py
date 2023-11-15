@@ -11,9 +11,9 @@ def index(request):
 
 
 def show_category(request, category_slug):
-    c = get_object_or_404(Category, category_slug)
-    product = c.product_set.all()
-    print(product)
+    c = get_object_or_404(Category, slug=category_slug)
+    products = c.product_set.all()
+    print(c)
     page_title = c.name
     meta_keywords = c.meta_keywords
     meta_description = c.meta_description
@@ -21,7 +21,7 @@ def show_category(request, category_slug):
         'page_title':page_title,
         'meta_keywords':meta_keywords,
         'meta_descriptions':meta_description,
-        'product':product,
+        'products':products,
         'c':c
     }
     return render(request, 'catalog/category.html',context)
@@ -30,7 +30,7 @@ def show_category(request, category_slug):
 
 
 def show_product(request, product_slug):
-    p = get_object_or_404(Product, product_slug)
+    p = get_object_or_404(Product, slug=product_slug)
     categories = p.categories.filter(is_active=True)
     page_title = p.name
     meta_keywords = p.meta_keywords
