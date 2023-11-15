@@ -1,0 +1,29 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+a{
+    color: #98Ac5e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+.product_thumbnail{
+    text-align: center;
+    float: left;
+    width: 150px;
+    height: 200px;
+}
+
+.product_image{
+    float: left;
+    padding: 0 10px 10px 0;
+}
