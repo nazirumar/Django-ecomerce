@@ -8,7 +8,7 @@ class Category(models.Model):
     description =models.TextField()
     is_active = models.BooleanField(default=True)
     meta_keywords = models.CharField("Meta Keywords",max_length=255,help_text="Comman-delimited set of SEO Keywods for meta tag")
-    meta_description = models.CharField("Meta Descriptions", max_length=255,help_text='Conten for description meta tag')
+    meta_description = models.CharField("Meta Descriptions", max_length=255,help_text='Content for description meta tag')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -19,7 +19,7 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
     
     def get_absolute_url(self):
@@ -50,7 +50,7 @@ class Product(models.Model):
         db_table = 'products'
         ordering = ['-created_at']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
     
 

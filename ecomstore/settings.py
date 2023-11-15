@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'catalog'
+    'django.contrib.sites',
+    'catalog',
+    'djangoblog',
+    'utils'
 ]
 
 MIDDLEWARE = [
@@ -63,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'utils.context_processors'
             ],
         },
     },
@@ -120,6 +124,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+
+
+SITE_NAME = 'Modern Musician'
+META_KEYWORDS = 'Music, instruments,music accessories, musician supplies'
+META_DESCRIPTION = 'Modern Music is online supplier of instruments, sheet music, and other accessories for musicians'
+
+
+
+
+
+
+
 
 STATIC_URL = 'static/'
 
