@@ -11,7 +11,7 @@
 Brand: <em>{{ p.brand }}</em> <br /><br />
 SKU: {{ p.sku }}
 <br />
-In categor{{ categories.count|pluralize: "y,ies" }}: {% for c in categories %}
+In categor{{ categories.count|pluralize:"y,ies" }}: {% for c in categories %}
 <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
 {% if not forloop.last %}, {% endif %} {% endfor %}
 <br />
