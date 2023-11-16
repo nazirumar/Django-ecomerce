@@ -58,6 +58,7 @@
         - Product ID
         - Date product was added to cart
         - Quantity in the cart
+
     Cart file
         function(
         - _cart_id
@@ -65,6 +66,31 @@
         - get_cart_items
         - add_to_cart
         - cart_distinct_items)
+        - show_cart
+        - update_cart
+        - delete cart
+        - remove cart
+        - cart_subtotal
+
+        - # django template tags
+            [^1 ] catalog_tags
+            [^2 ] category_list
+
+    FlatPage
+        -- Settings
+            - Install App
+                'django.contrib.flatpages',
+
+            - MIDDLEWARE_CLASSES
+                'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+            ///  Add  SITE_ID  to your project settings
+    Footer
+        footer html file
+        create tags           
+
+            
+
+
 
 
 

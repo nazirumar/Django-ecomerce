@@ -41,7 +41,8 @@ Cart Subtotal:</th>
 </td>
 <td>{{ item.price|currency }}</td>
 <td class="right">
-<form method="post" action="." class="cart">
+<form method="post" action="" class="cart">
+    {% csrf_token %}
 <label for="quantity">Quantity:</label>
 <input type="text" name="quantity" value="{{ item.quantity }}" id="quantity" size="2" class="quantity" maxlength="5" />
 <input type="hidden" name="item_id" value="{{ item.id }}" />
@@ -51,9 +52,10 @@ Cart Subtotal:</th>
 </form>
 </td>
 <td>
-<form method="post" action="." class="cart">
+<form method="post" action="" class="cart">
+    {% csrf_token %}
 <input type="hidden" name="item_id" value="{{ item.id }}" />
-<input type="submit" name="submit" value="Remove"/>
+<input type="submit" name="submit" value="Remove" />
 </form>
 </td>
 <td class="right">{{ item.total|currency }}</td>
