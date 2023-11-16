@@ -25,6 +25,8 @@ from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('catalog.urls')),
+    path('cart/', include('cart.urls')),
+
 ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,

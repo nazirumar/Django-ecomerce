@@ -1,7 +1,7 @@
 from django.db import models
 from catalog.models import Product, Category
 # Create your models here.
-from django.urls import reverse
+
 
 
 

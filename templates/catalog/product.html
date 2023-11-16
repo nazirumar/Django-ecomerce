@@ -20,7 +20,12 @@ In categor{{ categories.count|pluralize:"y,ies" }}: {% for c in categories %}
 <br />
 Now: ${{ p.price }} {% else %} Price: $ {{ p.price }} {% endif %}
 <br /><br />
-[add to cart button]
+<form method="post"  class="cart">
+  {% csrf_token %}
+  {{ form.as_p }}
+<br />
+<input type="submit" value="Add To Cart" name="submit" alt="Add To Cart" />
+</form>
 <br /><br />
 <div class="cb"><br /><br /></div>
 <h3>Product Description</h3>
