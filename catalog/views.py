@@ -59,7 +59,6 @@ def show_product(request, product_slug):
     form.fields['product_slug'].widget.attrs['value'] = product_slug
     # set the test cookie on our first GET request
     request.session.set_test_cookie()
-    print(form)
     context = {
     'page_title': page_title,
     'meta_keywords': meta_keywords,
