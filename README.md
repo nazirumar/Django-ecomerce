@@ -58,6 +58,13 @@
         - Product ID
         - Date product was added to cart
         - Quantity in the cart
+    Cart file
+        function(
+        - _cart_id
+        - _generate_cart_id
+        - get_cart_items
+        - add_to_cart
+        - cart_distinct_items)
 
 
 
